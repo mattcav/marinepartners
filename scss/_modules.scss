@@ -1,15 +1,23 @@
 .home-header {
     overflow: hidden;
-
+    background: #222;
     a {
         color:$lightGrey;
     }
 
     @media #{$large-up} {
-        @include position(absolute, top 10% left 0);
+        background: transparent;
+        @include position(absolute, top 1% left 0);
         @include grid-column(
             $columns:12
             );
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+
+        max-width: rem-calc(1300);
+        left:50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -23,6 +31,7 @@
         @include grid-column(
             $columns:4
             );
+        max-width: 100%;
     }
 }
 
@@ -46,6 +55,20 @@
     position:relative;
 }
 
+
+.homenews__header {
+    text-align: center;
+    overflow: hidden;
+}
+
+.hometitle {
+    font-size:rem-calc(44);
+    font-family: $special-font-family;
+    @media #{$large-up} {
+        font-size:rem-calc(56);
+    }
+}
+
 .home-nav {
         @include position(relative, top 0 right 0);
         @include grid-column(
@@ -56,7 +79,182 @@
         text-align: center;
 }
 
+.home-nav__list {
+    width:100%;
+}
 
 .home-nav__link {
-    background:$lightGrey;
+    background:white;
+    font-family: $special-font-family;
+    text-transform: uppercase;
+    font-size:rem-calc(18);
+    padding:0.1em;
+
+    &:hover {
+        color:$lightGrey !important;
+    }
+}
+
+.home-section {
+    padding:1rem;
+    position:relative;
+    z-index:10;
+    overflow: hidden;
+    @media #{$medium-up} {
+        padding:2rem;
+    }
+}
+
+.home--news {
+    background:white;
+}
+
+.home--services {
+    padding:0;
+}
+.services__inner {
+    padding:6em 0 3em;
+    overflow: hidden;
+
+}
+.newscover {
+    @include grid-column(
+        $columns:12,
+        $collapse:true
+        );
+    @media #{$medium-up} {
+        display:flex;
+        align-items:center;
+        &:nth-child(even) {
+            .newscover__figure { float:right;}
+            flex-direction: row-reverse;
+        }
+    }
+    margin:2rem 0;
+}
+
+.newscover__figure {
+    @include grid-column(
+            $columns:12,
+            $collapse:true
+        );
+    @media #{$medium-up} {
+        @include grid-column(
+            $columns:8
+        );
+    }
+}
+.newscover__img {
+    width:100%;
+}
+
+.newscover__blurb{
+        @include grid-column(
+            $columns:12,
+            $collapse:true
+        );
+    @media #{$medium-up} {
+        @include grid-column(
+            $columns:4
+        );
+    }    
+}
+.newscover__inner {
+    max-width: 18rem;
+    margin:0 auto;
+}
+.newscover__title {
+    font-size:rem-calc(27);
+}
+
+.newscover__blurb p {
+    font-size:rem-calc(18);
+}
+
+.hometitle--services {
+    color:$lightGrey;
+}
+
+.service {
+   @include grid-column(
+            $columns:12
+        );
+   float:none;
+
+   text-align: center;
+   margin:2rem auto;
+      &:first-child {
+        margin:1rem auto 2rem;
+      }
+      &:last-child {
+        margin:2rem auto 1rem;
+      }
+
+    @media #{$large-up} {
+        @include grid-column(
+            $columns:4
+        );
+        float:left;    
+    }  
+}
+
+.service__title {
+    font-size:rem-calc(27);
+}
+
+.service__title,
+.service__text{
+    color:white;
+}
+
+.service__link {
+    border: 1px solid $emerald;
+    color: $emerald;
+    padding: 0.3em 0.5em 0.5em;
+    &:hover, &:active {
+        color:lighten($emerald, 20);
+    }
+}
+
+.service__inner {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+
+// footer
+
+.footer {
+    background: $darkGrey;
+    color:white;
+    @include grid-column(
+        $columns:12,
+        $collapse:true
+        );
+}
+
+.contacts {
+    @include grid-column(
+        $columns:12
+        );
+}
+
+.footer-logo {
+    max-width: 18rem;
+}
+
+.footer__link {
+    color:white;
+    text-transform: underline;
+}
+
+.vcard--footer {
+    padding:0;
+}
+
+.bottom-img {
+    position:relative;
+}
+.bottom-img__img {
+    @include position(absolute, bottom 0 left 0 right 0);
 }

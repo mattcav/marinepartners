@@ -1,0 +1,25 @@
+a {
+    transition: all 300ms ease-out 0s;
+}
+
+.with-hovercover {
+    display: inline-block;
+    position:relative;
+    z-index:10;
+    overflow: hidden;
+
+
+    .hovercover {
+        background:$darkGrey;
+        @include position(absolute, top 0 left 0 right 0 bottom 0);
+        z-index: -1;
+        transform: translateX(-100%);
+        transition: all 300ms ease-out 0s;
+    }
+
+     &:hover {
+         .hovercover {
+            transform:translateX(0%);
+          }
+     }
+}

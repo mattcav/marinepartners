@@ -35,14 +35,14 @@
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
+$row-width: rem-calc(1300);
 // $column-gutter: rem-calc(30);
 // $total-columns: 12;
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "ff-meta-web-pro","Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -70,11 +70,12 @@ $primary-color: $red;
 // $shiny-edge-size: 0 1px 0;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
+$microformat-border-width: 0px;
 
 // Media Query Ranges
-// $small-range: (0em, 40em);
-// $medium-range: (40.063em, 64em);
-// $large-range: (64.063em, 90em);
+$small-range: (0em, 44em);
+$medium-range: (44.063em, 62em);
+$large-range: (62.063em, 90em);
 // $xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em);
 
@@ -117,7 +118,9 @@ $primary-color: $red;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+$special-font-family:'Refrigerator-deluxe', sans-serif; 
+$header-font-family: "ff-meta-serif-web-pro", georgia, serif;
+
 // $header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;

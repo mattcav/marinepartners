@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>marinepartners - prototipo</title>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css" />
+    <script type="text/javascript" src="//use.typekit.net/ipv1hyx.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <?php //wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
