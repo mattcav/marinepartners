@@ -1,0 +1,62 @@
+.home-header {
+    overflow: hidden;
+
+    a {
+        color:$lightGrey;
+    }
+
+    @media #{$large-up} {
+        @include position(absolute, top 10% left 0);
+        @include grid-column(
+            $columns:12
+            );
+    }
+}
+
+.home-header__left {
+    @include grid-column(
+        $columns:10,
+        $float:left
+        );
+    max-width: rem-calc(270);
+    @media #{$large-up} {
+        @include grid-column(
+            $columns:4
+            );
+    }
+}
+
+.home-header__right {
+    @include grid-column(
+        $columns:2,
+        $float:right
+        );
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    @media #{$medium-up} {
+        line-height: 4.5rem;
+    }
+}
+
+.splash {
+    position:relative;
+}
+
+.home-nav {
+        @include position(relative, top 0 right 0);
+        @include grid-column(
+            $columns:2,
+            $float:right
+            );
+        z-index:10;
+        text-align: center;
+}
+
+
+.home-nav__link {
+    background:$lightGrey;
+}
