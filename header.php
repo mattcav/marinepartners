@@ -21,4 +21,16 @@
             <li class="offcanvas__item"><a href="#" class="offcanvas__link">Projects</a></li>
             <li class="offcanvas__item"><a href="#" class="offcanvas__link">Network</a></li>
         </ul>
+
+        <form action="#" class="offcanvas__search" id="oc-search">
+            <div class="search__inner">
+            <h2 class="search__title">Cerca nel sito:</h2>
+              <div class="search__input">
+                <input type="search" placeholder="scrivi qui per cercare">
+              </div>
+              <div class="search__button">
+                <button class="postfix"><span class="fontawesome-search"></span></button>
+              </div>
+            </div>
+          </form>
     </aside>
